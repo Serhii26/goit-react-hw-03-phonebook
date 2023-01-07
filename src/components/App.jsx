@@ -15,7 +15,7 @@ export class App extends Component {
     ],
     filter: '',
   };
-  
+
   handlFormSubmit = ({ name, number }) => {
     const { contacts } = this.state;
     let newContact = {
@@ -47,8 +47,8 @@ export class App extends Component {
     );
   };
   componentDidMount() {
-    // CONTACTS_KEY = 
-    
+    // CONTACTS_KEY =
+
     const contacts = localStorage.getItem('contacts');
     const parsedId = JSON.parse(contacts);
 
@@ -60,11 +60,8 @@ export class App extends Component {
     const nextId = this.state.contacts;
     const prevId = prevState.contacts;
     if (nextId !== prevId) {
-     
       localStorage.setItem('contacts', JSON.stringify(nextId));
     }
-
-    
   }
 
   render() {
