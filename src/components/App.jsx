@@ -53,7 +53,7 @@ export class App extends Component {
     const parsedId = JSON.parse(contacts);
 
     if (parsedId) {
-      this.setState({ todos: parsedId });
+      this.setState({ contacts: parsedId });
     }
   }
   componentDidUpdate(prevProps, prevState) {
